@@ -1,0 +1,96 @@
+:LaTeX_PROPERTIES:
+#+LANGUAGE: de
+#+OPTIONS: d:nil todo:nil pri:nil tags:nil
+#+OPTIONS: H:4
+#+LaTeX_CLASS: orgstandard
+#+LaTeX_CMD: xelatex
+#+LATEX_HEADER: \usepackage{listings}
+:END:
+
+:REVEAL_PROPERTIES:
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
+#+REVEAL_REVEAL_JS_VERSION: 4
+#+REVEAL_THEME: league
+#+REVEAL_EXTRA_CSS: ./mystyle.css
+#+REVEAL_HLEVEL: 2
+#+OPTIONS: timestamp:nil toc:nil num:nil
+:END:
+
+#+TITLE: Dreisatz
+#+SUBTITLE: Kaufmännisches Rechnen
+#+AUTHOR: WS-LAT
+
+
+** Thema: Grundlagen des Dreisatzes
+
+---
+
+ * Ziele:
+- Verstehen, was ein Dreisatz ist.
+- Erlernen, wie man einfache und komplexe Dreisätze berechnet.
+- Anwendung des Dreisatzes in IT- und kaufmännischen Situationen.
+
+** 1. Was ist ein Dreisatz?
+Ein Dreisatz ist eine Methode, um Werte in Verhältnissen zu berechnen. Wenn du weißt, wie zwei Werte miteinander verbunden sind, kannst du mithilfe des Dreisatzes andere Werte berechnen.
+
+Beispiel: Wenn ein IT-System 4 Stunden benötigt, um 200 Dateien zu verarbeiten, wie lange dauert es, 500 Dateien zu verarbeiten?
+
+---
+
+** 2. Einfacher Dreisatz
+Ein einfacher Dreisatz bedeutet, dass die Werte in einem **geraden Verhältnis** stehen. Das heißt, wenn ein Wert steigt, steigt der andere auch.
+
+*** Schritte:
+1. Schreibe die bekannten Werte auf:
+   - 4 Stunden für 200 Dateien.
+2. Berechne die Zeit pro Datei:
+   - 4 Stunden ÷ 200 Dateien = 0,02 Stunden pro Datei.
+3. Multipliziere die Zeit pro Datei mit der gewünschten Anzahl:
+   - 0,02 Stunden × 500 Dateien = 10 Stunden.
+
+---
+
+** 3. Dreisatz mit geradem Verhältnis
+Manchmal müssen größere oder kleinere Mengen berechnet werden. Das Verhältnis bleibt jedoch immer proportional.
+
+*** Beispiel: 
+Wenn ein IT-Dienstleister 3 Mitarbeiter benötigt, um 15 Server in einer Woche zu warten, wie viele Mitarbeiter sind notwendig, um 30 Server in derselben Zeit zu warten?
+
+*** Schritte:
+1. Berechne die Anzahl der Server pro Mitarbeiter:
+   - 15 Server ÷ 3 Mitarbeiter = 5 Server pro Mitarbeiter.
+2. Berechne die Anzahl der benötigten Mitarbeiter für 30 Server:
+   - 30 Server ÷ 5 Server pro Mitarbeiter = 6 Mitarbeiter.
+
+---
+
+** 4. Dreisatz mit ungeradem Verhältnis
+Ein ungerades Verhältnis bedeutet, dass nicht immer alle Werte direkt proportional sind. Manchmal muss der Dreisatz angepasst werden.
+
+*** Beispiel:
+Ein Server kann 10 virtuelle Maschinen (VMs) mit einer Leistung von 2 GHz betreiben. Wie viele Server werden benötigt, um 50 VMs mit derselben Leistung zu betreiben?
+
+*** Schritte:
+1. Berechne die Anzahl der VMs pro Server:
+   - 10 VMs pro Server.
+2. Berechne die Anzahl der Server für 50 VMs:
+   - 50 VMs ÷ 10 VMs pro Server = 5 Server.
+
+---
+
+** 5. Übungen
+- Ein Softwareunternehmen schreibt 500 Zeilen Code in 8 Stunden. Wie lange dauert es, 1250 Zeilen Code zu schreiben?
+- Ein Webshop verarbeitet 300 Bestellungen in 6 Stunden. Wie viele Bestellungen werden in 10 Stunden verarbeitet?
+
+---
+
+** 6. Prüfungsaufgaben
+Die Dozentin wird weitere Aufgaben stellen, die dich auf reale Probleme vorbereiten. 
+Tipp: Schreibe die Schritte klar und deutlich auf, um Fehler zu vermeiden!
+
+---
+
+** Zusammenfassung
+- Der Dreisatz ist eine einfache und praktische Methode, um Werte zu berechnen.
+- Achte darauf, ob das Verhältnis gerade oder ungerade ist.
+- Übe mit verschiedenen Aufgaben, um sicher zu werden.

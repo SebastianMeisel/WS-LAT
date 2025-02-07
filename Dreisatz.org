@@ -1,0 +1,93 @@
+:LaTeX_PROPERTIES:
+#+LANGUAGE: de
+#+OPTIONS: d:nil todo:nil pri:nil tags:nil
+#+OPTIONS: H:4
+#+LaTeX_CLASS: orgstandard
+#+LaTeX_CMD: xelatex
+#+LATEX_HEADER: \usepackage{listings}
+:END:
+
+:REVEAL_PROPERTIES:
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
+#+REVEAL_REVEAL_JS_VERSION: 4
+#+REVEAL_THEME: league
+#+REVEAL_EXTRA_CSS: ./mystyle.css
+#+REVEAL_HLEVEL: 2
+#+OPTIONS: timestamp:nil toc:nil num:nil
+:END:
+
+#+TITLE: Dreisatz
+#+SUBTITLE: Kaufmännisches Rechnen
+#+AUTHOR: WS-LAT
+
+
+** Thema: Grundlagen des Dreisatzes
+
+
+ * Ziele:
+   * Verstehen, was ein Dreisatz ist.
+   * Erlernen, wie man einfache und komplexe Dreisätze berechnet.
+   * Anwendung des Dreisatzes in IT- und kaufmännischen Situationen.
+
+** 1. Was ist ein Dreisatz?
+
+Ein Dreisatz ist eine Methode, um Werte in Verhältnissen zu berechnen. Wenn du weißt, wie zwei Werte miteinander verbunden sind, kannst du mithilfe des Dreisatzes andere Werte berechnen.
+
+Beispiel: Wenn ein IT-System 4 Stunden benötigt, um 200 Dateien zu verarbeiten, wie lange dauert es, 500 Dateien zu verarbeiten?
+
+
+** 2. Einfacher Dreisatz
+
+Ein einfacher Dreisatz bedeutet, dass die Werte in einem **geraden Verhältnis** stehen. Das heißt, wenn ein Wert steigt, steigt der andere auch.
+
+*** Schritte:
+1. Schreibe die bekannten Werte auf:
+   - 4 Stunden für 200 Dateien.
+2. Berechne die Zeit pro Datei:
+   - 4 Stunden ÷ 200 Dateien = 0,02 Stunden pro Datei.
+3. Multipliziere die Zeit pro Datei mit der gewünschten Anzahl:
+   - 0,02 Stunden × 500 Dateien = 10 Stunden.
+
+
+** 3. Dreisatz mit geradem Verhältnis
+Manchmal müssen größere oder kleinere Mengen berechnet werden. Das Verhältnis bleibt jedoch immer *proportional*. D. h. wenn ein Wert auf einer Seite der Rechnung größer wird, wird er auch auf der anderen Seite im gleichen Maß größer. Umgekehrt wird der Wert auf der anderen Seite der Rechnung kleiner, wenn der auf der anderen Seite kleiner wird.
+
+*** Beispiel: 
+Wenn ein IT-Dienstleister 3 Mitarbeiter benötigt, um 15 Server in einer Woche zu warten, wie viele Mitarbeiter sind notwendig, um 30 Server in derselben Zeit zu warten?
+
+*** Schritte:
+1. Berechne die Anzahl der Server pro Mitarbeiter:
+   - 15 Server ÷ 3 Mitarbeiter = 5 Server pro Mitarbeiter.
+2. Berechne die Anzahl der benötigten Mitarbeiter für 30 Server:
+   - 30 Server ÷ 5 Server pro Mitarbeiter = 6 Mitarbeiter.
+
+** 4. Dreisatz mit ungeradem Verhältnis
+Ein ungerades Verhältnis, auch indirekt proportional genannt, bedeutet, dass eine Größe abnimmt, während eine andere zunimmt. Das Produkt der beiden Größen bleibt konstant.
+
+*** Beispiel:
+Ein IT-Unternehmen hat einen festen Arbeitsaufwand für ein Projekt. Wenn 5 Entwickler 20 Tage benötigen, um das Projekt abzuschließen, wie viele Tage würden 10 Entwickler benötigen?
+
+*** Schritte:
+1. **Bekannte Werte notieren:**
+   - 5 Entwickler benötigen 20 Tage.
+
+2. **Produkt berechnen:**
+   - 5 Entwickler × 20 Tage = 100 Entwickler-Tage.
+
+3. **Gesuchte Größe berechnen:**
+   - 100 Entwickler-Tage ÷ 10 Entwickler = 10 Tage.
+
+**Erklärung:**
+Da der Gesamtarbeitsaufwand konstant bleibt, führt eine Verdopplung der Anzahl der Entwickler zu einer Halbierung der benötigten Zeit. Dies ist ein Beispiel für ein indirekt proportionales Verhältnis.
+
+
+** 5. Übungen
+- Ein Server kann 50 Anfragen pro Sekunde verarbeiten. Wie viele Server werden benötigt, um 200 Anfragen pro Sekunde zu bearbeiten?
+- Ein Team von 4 Entwicklern benötigt 12 Stunden, um eine Software zu testen. Wie lange würde es dauern, wenn das Team auf 6 Entwickler erhöht wird?
+
+
+
+** Zusammenfassung
+- Beim ungeraden (indirekt proportionalen) Verhältnis führt eine Erhöhung einer Größe zu einer Verringerung der anderen, wobei das Produkt der beiden Größen konstant bleibt.
+- Typische Beispiele sind Arbeitsaufwand und benötigte Zeit oder Ressourcen und Verarbeitungskapazität.
+- Das Verständnis dieser Zusammenhänge ist wichtig für die Planung und Optimierung in IT- und kaufmännischen Prozessen.
