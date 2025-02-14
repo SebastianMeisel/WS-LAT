@@ -1,0 +1,106 @@
+:LaTeX_PROPERTIES:
+#+LANGUAGE: de
+#+OPTIONS: d:nil todo:nil pri:nil tags:nil
+#+OPTIONS: H:4
+#+LaTeX_CLASS: orgstandard
+#+LaTeX_CMD: xelatex
+#+LATEX_HEADER: \usepackage{listings}
+:END:
+
+:REVEAL_PROPERTIES:
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
+#+REVEAL_REVEAL_JS_VERSION: 4
+#+REVEAL_THEME: league
+#+REVEAL_EXTRA_CSS: ./mystyle.css
+#+REVEAL_HLEVEL: 2
+#+OPTIONS: timestamp:nil toc:nil num:nil
+:END:
+
+#+TITLE:  Durchschnittsrechnung
+#+SUBTITLE: WS-LAT
+#+AUTHOR: Sebastian Meisel
+
+**  Was ist eine Durchschnittsrechnung?
+
+Die Durchschnittsrechnung wird genutzt, um aus mehreren Werten einen repräsentativen Mittelwert zu bestimmen. In der IT spielt sie eine wichtige Rolle bei Performance-Analysen, Kostenberechnungen und statistischen Auswertungen.
+
+Es gibt zwei Hauptarten:
+
+Einfacher Durchschnitt (alle Werte haben das gleiche Gewicht).
+
+Gewichteter Durchschnitt (einige Werte haben eine höhere Bedeutung).
+
+** Einfacher Durchschnitt
+Beim einfachen Durchschnitt werden alle Werte addiert und durch die Anzahl der Werte geteilt.
+
+*** Beispiel
+Ein IT-Service-Unternehmen analysiert die durchschnittliche Bearbeitungszeit von Tickets in einem Monat:
+
+| Ticket-ID | Bearbeitungszeit (Minuten) |
+|-----------+-------------------------|
+| 001       | 30                      |
+| 002       | 45                      |
+| 003       | 25                      |
+| 004       | 40                      |
+
+Berechnung:
+
+Summe der Werte: 30 + 45 + 25 + 40 = 140 Minuten
+
+Anzahl der Werte: 4
+
+Durchschnittliche Bearbeitungszeit: 140 ÷ 4 = 35 Minuten
+
+** 3. Gewichteter Durchschnitt
+Beim gewichteten Durchschnitt haben einige Werte eine stärkere Bedeutung als andere. Dies wird häufig verwendet, wenn Daten unterschiedlich stark ins Gewicht fallen.
+
+*** Beispiel
+Ein Softwareunternehmen analysiert den durchschnittlichen Umsatz pro verkauftem Softwarepaket. Es gibt verschiedene Pakete mit unterschiedlichen Verkaufszahlen:
+
+| Software-Paket | Anzahl Verkäufe | Preis (EUR) |
+|---------------+---------------+------------|
+| Basis        | 50            | 100        |
+| Pro          | 30            | 200        |
+| Enterprise   | 20            | 400        |
+
+Berechnung:
+
+Summe der Produkte aus Verkäufe × Preis:
+(50 × 100) + (30 × 200) + (20 × 400) = 5000 + 6000 + 8000 = 19000 EUR
+
+Summe der Verkäufe: 50 + 30 + 20 = 100
+
+Gewichteter Durchschnittspreis: 19000 ÷ 100 = 190 EUR
+
+** 4. Übungen
+
+ 1) Ein Unternehmen misst die Antwortzeiten eines Cloud-Services: 120 ms, 150 ms, 130 ms, 140 ms. Berechne den einfachen Durchschnitt.
+ 2) Berechne den gewichteten Durchschnitt der Supportfälle eines IT-Dienstleisters mit folgenden Daten:
+    - Standard-Support: 200 Fälle, Bearbeitungszeit 15 Minuten
+    - Premium-Support: 50 Fälle, Bearbeitungszeit 5 Minuten
+    - VIP-Support: 20 Fälle, Bearbeitungszeit 2 Minuten
+ 3) Berechne den durchschnittlichen Stromverbrauch von fünf Servern: 500W, 550W, 520W, 510W, 530W.
+ 4) Ein IT-Unternehmen analysiert die durchschnittlichen monatlichen Kosten für Softwarelizenzen: 150€, 170€, 160€, 180€, 155€. Berechne den Durchschnitt.
+ 5) Berechne den gewichteten Durchschnitt der Betriebskosten für unterschiedliche Server-Typen:
+    - Kleine Server: 100 Stück, 120€ Betriebskosten pro Monat
+    - Mittlere Server: 50 Stück, 200€ Betriebskosten pro Monat
+    - Große Server: 25 Stück, 400€ Betriebskosten pro Monat
+ 6) Ein Rechenzentrum misst die durchschnittliche CPU-Auslastung über verschiedene Zeiträume: 60%, 70%, 65%, 75%. Berechne den einfachen Durchschnitt.
+ 7) Berechne die durchschnittliche Latenzzeit für verschiedene Netzwerkanfragen: 15 ms, 20 ms, 18 ms, 22 ms, 17 ms.
+ 8) Ein Online-Shop analysiert die durchschnittlichen täglichen Bestellungen: 200, 250, 300, 220, 270. Berechne den Durchschnitt.
+ 9) Berechne den gewichteten Durchschnitt der Verkaufszahlen für verschiedene Produkttypen:
+    - Produkt A: 500 Verkäufe, 30€ pro Stück
+    - Produkt B: 300 Verkäufe, 50€ pro Stück
+    - Produkt C: 200 Verkäufe, 80€ pro Stück
+
+** 5. Lösungsteil
+
+ 1) 135 ms
+ 2) 12,19 Minuten
+ 3) 522W
+ 4) 163€
+ 5) 182,86€
+ 6) 67.5%
+ 7) 18.4 ms
+ 8) 248 Bestellungen
+ 9) 46€
