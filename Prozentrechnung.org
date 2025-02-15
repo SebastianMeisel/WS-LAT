@@ -1,0 +1,147 @@
+:LaTeX_PROPERTIES:
+#+LANGUAGE: de
+#+OPTIONS: d:nil todo:nil pri:nil tags:nil
+#+OPTIONS: H:4
+#+LaTeX_CLASS: orgstandard
+#+LaTeX_CMD: xelatex
+#+LATEX_HEADER: \usepackage{listings}
+:END:
+
+:REVEAL_PROPERTIES:
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
+#+REVEAL_REVEAL_JS_VERSION: 4
+#+REVEAL_THEME: league
+#+REVEAL_EXTRA_CSS: ./mystyle.css
+#+REVEAL_HLEVEL: 2
+#+OPTIONS: timestamp:nil toc:nil num:nil
+:END:
+
+#+TITLE: Prozentrechnung
+#+SUBTITLE: Kaufmännisches Rechnen in der IT
+#+AUTHOR: WS-LAT
+
+** Thema: Grundlagen der Prozentrechnung
+
+* Ziele:
+  * Verstehen der Grundlagen der Prozentrechnung
+  * Unterscheiden zwischen Prozentrechnung und Prozentrechnung im Hundert
+  * Verbindung zum Dreisatz herstellen
+  * Anwendung in IT-spezifischen Szenarien
+
+** Was ist Prozentrechnung?
+
+Prozentrechnung ist eine Methode, um Anteile von einem Ganzen zu berechnen. "Prozent" bedeutet "von Hundert" (lateinisch "per centum"). 
+
+Die drei Grundgrößen der Prozentrechnung sind:
+- Grundwert (G): Das Ganze, die Basis (100%)
+- Prozentsatz (p): Der Anteil in Prozent
+- Prozentwert (W): Der berechnete Anteil
+
+** Verbindung zum Dreisatz
+
+Die Prozentrechnung lässt sich als Spezialfall des Dreisatzes verstehen:
+- 100% entsprechen dem Grundwert
+- Der gesuchte Prozentwert verhält sich proportional
+
+*** Beispiel als Dreisatz:
+Ein Server hat eine Kapazität von 1000 GB (Grundwert).
+Wie viel sind 75% davon?
+
+1. Als Dreisatz:
+   - 100% = 1000 GB
+   - 1% = 1000 GB ÷ 100 = 10 GB
+   - 75% = 10 GB × 75 = 750 GB
+
+** Grundformeln der Prozentrechnung
+
+#+ATTR_HTML: :width 50%
+#+ATTR_LATEX: :width .65\linewidth :placement [!htpb]
+#+ATTR_ORG: :width 700
+[[file:Bilder/Prozentrechnung.png]]
+
+*** Prozentwert berechnen:
+W = G × p ÷ 100
+
+*** Grundwert berechnen:
+G = W × 100 ÷ p
+
+*** Prozentsatz berechnen:
+p = W × 100 ÷ G
+
+** Prozentrechnung im Hundert vs. von Hundert
+
+#+ATTR_HTML: :width 50%
+#+ATTR_LATEX: :width .65\linewidth :placement [!htpb]
+#+ATTR_ORG: :width 700
+[[file:Bilder/ProzentrechnungIH.png]]
+
+*** Von Hundert (normale Prozentrechnung):
+- Berechnet einen Anteil vom Grundwert
+- Beispiel: 19% MwSt. von 1000€ Netto = 190€
+
+*** Im Hundert:
+- Der Prozentwert ist im Grundwert enthalten
+- Wird bei Rabatt- und Mehrwertsteuerberechnungen verwendet
+- Beispiel: In 1190€ (Brutto) sind 19% MwSt. enthalten = 190€
+
+** Anwendungsbeispiele in der IT
+
+*** Beispiel 1: Serverauslastung
+Ein Server zeigt 85% CPU-Auslastung. Die maximale Rechenleistung beträgt 3,6 GHz.
+Wie viel GHz werden aktuell genutzt?
+
+Lösung:
+- Grundwert (G) = 3,6 GHz
+- Prozentsatz (p) = 85%
+- Prozentwert (W) = 3,6 × 85 ÷ 100 = 3,06 GHz
+
+*** Beispiel 2: Speicherplatzberechnung
+Ein 2TB Festplattenspeicher ist zu 75% belegt. 
+Wie viel freier Speicher ist noch verfügbar?
+
+Lösung:
+1. Belegter Speicher:
+   - W = 2000 GB × 75 ÷ 100 = 1500 GB
+2. Freier Speicher:
+   - 2000 GB - 1500 GB = 500 GB
+
+** Prozentrechnung im Hundert in der IT
+
+*** Beispiel: Rabattberechnung
+Ein Software-Lizenzpaket kostet mit 20% Rabatt 800€.
+Wie hoch war der ursprüngliche Preis?
+
+Lösung:
+- 800€ entsprechen 80% (100% - 20% Rabatt)
+- Grundwert = 800€ × 100 ÷ 80 = 1000€
+
+** Übungen
+
+1) Ein Server hat eine Auslastung von 90%. Bei maximaler Auslastung können 10.000 Anfragen pro Sekunde verarbeitet werden. Wie viele Anfragen werden aktuell verarbeitet?
+
+2) Eine SSD mit 1TB Speicher ist zu 60% belegt. Wie viel Speicherplatz ist noch frei (in GB)?
+
+3) Ein Softwareunternehmen gewährt 15% Bildungsrabatt. Eine Lizenz kostet mit Rabatt 170€. Wie hoch ist der reguläre Preis?
+
+4) Die CPU-Temperatur eines Servers ist von 45°C auf 54°C gestiegen. Um wie viel Prozent ist die Temperatur gestiegen?
+
+5) Ein Backup-Prozess ist zu 80% abgeschlossen. Bisher wurden 400 GB gesichert. Wie groß ist das gesamte Backup?
+
+** Zusammenfassung
+
+- Die Prozentrechnung ist ein Spezialfall des Dreisatzes
+- Unterscheidung zwischen "von Hundert" und "im Hundert" ist besonders bei Preis- und Rabattberechnungen wichtig
+- In der IT wird Prozentrechnung häufig für:
+  * Auslastungsberechnungen
+  * Speicherplatzanalysen
+  * Performancemessungen
+  * Verfügbarkeitsberechnungen
+  * Rabatt- und Preiskalkulationen verwendet
+
+** Lösungen
+
+1) 10.000 × 90 ÷ 100 = 9.000 Anfragen/s
+2) 1000 GB × 40 ÷ 100 = 400 GB frei
+3) 170€ × 100 ÷ 85 = 200€
+4) (54 - 45) × 100 ÷ 45 = 20%
+5) 400 GB × 100 ÷ 80 = 500 GB

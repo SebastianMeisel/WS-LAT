@@ -53,7 +53,7 @@ Wenn ein IT-Dienstleister 3 Mitarbeiter benötigt, um 15 Server in einer Woche z
 2. Berechne die Anzahl der benötigten Mitarbeiter für 30 Server:
    - 30 Server ÷ 5 Server pro Mitarbeiter = 6 Mitarbeiter.
 
-** 4. Dreisatz mit ungeradem Verhältnis
+** Dreisatz mit ungeradem Verhältnis
 Ein ungerades Verhältnis, auch indirekt proportional genannt, bedeutet, dass eine Größe abnimmt, während eine andere zunimmt. Das Produkt der beiden Größen bleibt konstant.
 
 #+REVEAL: split
@@ -78,12 +78,39 @@ Ein IT-Unternehmen hat einen festen Arbeitsaufwand für ein Projekt. Wenn 5 Entw
 **Erklärung:**
 Da der Gesamtarbeitsaufwand konstant bleibt, führt eine Verdopplung der Anzahl der Entwickler zu einer Halbierung der benötigten Zeit. Dies ist ein Beispiel für ein indirekt proportionales Verhältnis.
 
-** 5. Übungen
-- Ein Server kann 50 Anfragen pro Sekunde verarbeiten. Wie viele Server werden benötigt, um 200 Anfragen pro Sekunde zu bearbeiten?
-- Ein Team von 4 Entwicklern benötigt 12 Stunden, um eine Software zu testen. Wie lange würde es dauern, wenn das Team auf 6 Entwickler erhöht wird?
+** Übungen
+  1) Ein Server kann 50 Anfragen pro Sekunde verarbeiten. Wie viele Server werden benötigt, um 200 Anfragen pro Sekunde zu bearbeiten?
+  2) 8 Arbeiter benötigen 15 Tage, um eine Aufgabe zu erledigen. Wie lange würden 12 Arbeiter für die gleiche Aufgabe benötigen? 
+  3) Ein Cloud-Speicheranbieter berechnet 5 € pro 100 GB Speicherplatz. Wie viel kostet es, 500 GB zu speichern?
+  4) Ein Lager mit Lebensmitteln reicht für 20 Personen 30 Tage. Wie lange würde der gleiche Vorrat für 15 Personen reichen?
+  5) Ein Rechenzentrum verbraucht 150 kWh Strom pro Tag. Wie hoch sind die Stromkosten pro Monat (30 Tage), wenn 1 kWh 0,20 € kostet?
+  6) Ein Software-Entwickler kann in 8 Stunden 200 Zeilen Code schreiben. Wie lange braucht er, um 500 Zeilen Code zu schreiben?
+  7) in Auto fährt mit einer Geschwindigkeit von 60 km/h und benötigt 4 Stunden für eine bestimmte Strecke. Wie lange würde es für die gleiche Strecke benötigen, wenn es mit 80 km/h fährt? 
+  8) Ein Netzwerkadministrator muss 20 Server aktualisieren. Wenn er 4 Server pro Stunde schafft, wie lange dauert der gesamte Prozess?
+  9) Ein Team von 4 Entwicklern benötigt 12 Stunden, um eine Software zu testen. Wie lange würde es dauern, wenn das Team auf 6 Entwickler erhöht wird?
+  10) Ein IT-Support-Team hat 120 Tickets pro Woche zu bearbeiten. Wenn das Team 5 Mitarbeiter hat und jeder Mitarbeiter gleich viele Tickets bearbeitet, wie viele Tickets bearbeitet jeder Mitarbeiter pro Woche?
 
 
 ** Zusammenfassung
 - Beim ungeraden (indirekt proportionalen) Verhältnis führt eine Erhöhung einer Größe zu einer Verringerung der anderen, wobei das Produkt der beiden Größen konstant bleibt.
 - Typische Beispiele sind Arbeitsaufwand und benötigte Zeit oder Ressourcen und Verarbeitungskapazität.
 - Das Verständnis dieser Zusammenhänge ist wichtig für die Planung und Optimierung in IT- und kaufmännischen Prozessen.
+
+#+LATEX: \clearpage
+#+ATTR_HTML: :width 50%
+#+ATTR_LATEX: :width .65\linewidth :placement [!htpb]
+#+ATTR_ORG: :width 700
+[[file:Bilder/Dreisatz_Comic.png]]
+
+** Lösungen
+  1) 1 Server / 50 Anfragen * 200 Anfragen = 4 Server
+  2) 8 Arbeiter * 15 d / 12 Arbeiter = 10 d
+  3) 5 € / 100 GB * 500 GB = 25 €
+  4) 150 kWh / 1 d * 30 d =  * 0,20 € = 900,00 €
+  5) 20 Personen * 30 d / 15 Personen = 40 d
+  6) 8 h / 200 Zeilen * 500 Zeilen = 20 h
+  7) 60 km/h * 4 h / 80 km/h = 3 h
+  8) 1 h / 4 Server * 20 Server = 5 h
+  9) 4 Entwickler * 12 h / 6 Entwickler = 8 h
+  10) 120 Tickets * 1 Woche / 5 Mitarbeiter = 24 Tickets
+
