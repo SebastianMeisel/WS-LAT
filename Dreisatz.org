@@ -90,7 +90,6 @@ Da der Gesamtarbeitsaufwand konstant bleibt, führt eine Verdopplung der Anzahl 
   9) Ein Team von 4 Entwicklern benötigt 12 Stunden, um eine Software zu testen. Wie lange würde es dauern, wenn das Team auf 6 Entwickler erhöht wird?
   10) Ein IT-Support-Team hat 120 Tickets pro Woche zu bearbeiten. Wenn das Team 5 Mitarbeiter hat und jeder Mitarbeiter gleich viele Tickets bearbeitet, wie viele Tickets bearbeitet jeder Mitarbeiter pro Woche?
 
-
 ** Zusammenfassung
 - Beim ungeraden (indirekt proportionalen) Verhältnis führt eine Erhöhung einer Größe zu einer Verringerung der anderen, wobei das Produkt der beiden Größen konstant bleibt.
 - Typische Beispiele sind Arbeitsaufwand und benötigte Zeit oder Ressourcen und Verarbeitungskapazität.
