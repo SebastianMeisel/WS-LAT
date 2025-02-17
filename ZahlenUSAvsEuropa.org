@@ -1,0 +1,72 @@
+:LaTeX_PROPERTIES:
+#+LANGUAGE: de
+#+OPTIONS: d:nil todo:nil pri:nil tags:nil
+#+OPTIONS: H:4
+#+LaTeX_CLASS: orgstandard
+#+LaTeX_CMD: xelatex
+#+LATEX_HEADER: \usepackage{listings}
+:END:
+
+:REVEAL_PROPERTIES:
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
+#+REVEAL_REVEAL_JS_VERSION: 4
+#+REVEAL_THEME: league
+#+REVEAL_EXTRA_CSS: ./mystyle.css
+#+REVEAL_HLEVEL: 2
+#+OPTIONS: timestamp:nil toc:nil num:nil
+:END:
+
+#+TITLE: Unterschiede zwischen englischer (USA) und europäischer Darstellung von Zahlen, Währungen und großen Zahlen
+#+SUBTITLE: Kaufmännisches Rechnen
+#+AUTHOR: WS-LAT
+
+* Dezimal- und Tausendertrenner
+   In den USA und einigen anderen englischsprachigen Ländern wird der Dezimaltrenner als Punkt (.) und der Tausendertrenner als Komma (,) geschrieben. In den meisten europäischen Ländern ist es genau umgekehrt:
+
+   | Region        | Dezimaltrenner | Tausendertrenner |
+   |--------------|---------------|----------------|
+   | USA, UK, Kanada, Australien | Punkt (.) | Komma (,) |
+   | Deutschland, Frankreich, Spanien, Italien | Komma (,) | Punkt (.) oder Leerzeichen ( ) |
+
+   *Beispiel:*
+   - USA: *1,234.56* (Eintausendzweihundertvierunddreißig Komma sechsundfünfzig)
+   - Deutschland: *1.234,56* (Eintausendzweihundertvierunddreißig Komma sechsundfünfzig)
+
+** *Probleme in der IT*:
+   - Fehlinterpretation von Zahlen in internationalen Dokumenten oder Tabellen (z.B. in CSV-Dateien)
+   - Software-Fehlkonfigurationen durch falsche Regional-Einstellungen
+   - Inkonsistente Dateneingabe in internationalen Systemen
+   
+* Währungsdarstellung
+   Auch die Darstellung von Währungen unterscheidet sich stark:
+   - In den USA wird das Währungssymbol *vor* den Betrag gesetzt (z. B. *$1,234.56*).
+   - In vielen europäischen Ländern wird das Währungssymbol *nach* den Betrag gesetzt oder mit Leerzeichen getrennt (z. B. *1.234,56 €* in Deutschland).
+
+** Probleme in der IT
+   - Unterschiedliche Formatierungen in Buchhaltungssystemen und Online-Zahlungsdiensten
+   - Automatische Währungsumrechnungstools können durch uneinheitliche Eingaben fehlschlagen
+   - Missverständnisse bei Rechnungen und Finanzberichten
+
+* Unterschiedliche Bedeutung von "Billion" und "Milliarde"
+   Besonders verwirrend ist die unterschiedliche Bedeutung der Begriffe "Billion" und "Milliarde" in englisch- und deutschsprachigen Kontexten:
+
+   | Englische Bezeichnung | Deutsche Bezeichnung |
+   |----------------------|---------------------|
+   | Billion (1,000,000,000) | Milliarde (1.000.000.000) |
+   | Trillion (1,000,000,000,000) | Billion (1.000.000.000.000) |
+
+   In den USA ist eine **Billion* eine *Milliarde*, während eine *Trillion* einer deutschen *Billion* entspricht. Dies führt zu häufigen Missverständnissen in Wirtschaft, Wissenschaft und Finanzwesen.
+
+** *Probleme in der IT*:
+   - Missverständliche Finanzberichte und Statistiken in internationalen Systemen
+   - Falsche Berechnungen in wirtschaftlichen und wissenschaftlichen Anwendungen
+   - Probleme bei der Datenkonvertierung zwischen verschiedenen Sprachversionen von Software
+
+* Fazit
+   Die Unterschiede in Zahlenformaten und Währungsdarstellungen können erhebliche Probleme in der internationalen Kommunikation und IT-Systemen verursachen. Unternehmen und Entwickler sollten daher:
+   - Einheitliche Formatierungsrichtlinien für Zahlen und Währungen festlegen
+   - Lokalisierungs- und Internationalisierungsstandards (wie Unicode CLDR) nutzen
+   - Benutzerfreundliche Eingabemethoden in Software und Webanwendungen bereitstellen, die automatisch das korrekte Format erkennen
+
+   Ein Bewusstsein für diese Unterschiede hilft dabei, Fehler und Missverständnisse in internationalen Geschäfts- und IT-Prozessen zu vermeiden.
+   

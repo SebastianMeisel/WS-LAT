@@ -1,0 +1,113 @@
+:LaTeX_PROPERTIES:
+#+LANGUAGE: de
+#+OPTIONS: d:nil todo:nil pri:nil tags:nil
+#+OPTIONS: H:4
+#+LaTeX_CLASS: orgstandard
+#+LaTeX_CMD: xelatex
+#+LATEX_HEADER: \usepackage{listings}
+:END:
+
+:REVEAL_PROPERTIES:
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
+#+REVEAL_REVEAL_JS_VERSION: 4
+#+REVEAL_THEME: league
+#+REVEAL_EXTRA_CSS: ./mystyle.css
+#+REVEAL_HLEVEL: 2
+#+OPTIONS: timestamp:nil toc:nil num:nil
+:END:
+
+
+#+TITLE: Bits, Nibbles, Bytes und Zahlensysteme
+#+SUBTITLE: Kaufmännisches Rechnen
+#+AUTHOR: WS-LAT
+
+* Bits und Bytes
+   - Das kleinste Speicherelement eines Computers ist das *Bit* (binary digit).
+   - Ein Bit kann zwei Zustände haben: *0* oder *1* (binäres System).
+   - *Ein Byte besteht aus 8 Bits* und ist die kleinste adressierbare Speichereinheit in vielen Computersystemen.
+
+   | Einheit  | Größe in Bits |
+   |----------+---------------|
+   | 1 Bit    | 1 Bit         |
+   | 1 Nibble | 4 Bits        |
+   | 1 Byte   | 8 Bits        |
+
+   - Ein *Nibble* besteht aus 4 Bits und entspricht einer hexadezimalen Ziffer (0–F).
+
+* Binäres und Hexadezimales Zahlensystem
+   - Das *binäre System* (Basis 2) verwendet nur die Ziffern *0 und 1*.
+     - Jede Stelle in einer Binärzahl entspricht einer Zweipotenz, z. B.:
+       - ~1010 = 1 * 2³ + 0 * 2² + 1 * 2¹ + 0 * 2⁰ = 8 + 0 + 2 + 1 = 10~
+       - ~1100 = 1 * 2³ + 1 * 2² + 0 * 2¹ + 0 * 2⁰ = 8 + 4 + 0 + 0 = 12~
+       - \(\hspace{2ex}\) ~11 =                   1 * 2¹ + 1 * 2⁰ =         2 + 1 =  3~
+   - Das *hexadezimale System* (Basis 16) verwendet die Ziffern *0-9 und A-F*:
+     - 0–9 entspricht 0–9 im Dezimalsystem.
+     - A–F entspricht 10–15 im Dezimalsystem.
+   - Hexadezimalzahlen werden oft mit *0x* oder *h* gekennzeichnet (z. B. 0x2F oder 2Fh).
+
+   *Beispiel für eine binäre zu hexadezimale Umwandlung*:
+   - Binär: `1010 1100` → Hexadezimal: `AC` (A=10, C=12)
+
+* Speichergrößen: KB, MB, TB, PB vs. KiB, MiB, TiB, PiB
+   - In der Informatik werden Speichergrößen oft in *Kilobyte (KB), Megabyte (MB), Terabyte (TB), Petabyte (PB)* angegeben.
+   - Diese Begriffe basieren ursprünglich auf Zweierpotenzen (1 KB = 1024 Byte), werden aber im Marketing oft als Zehnerpotenzen (1 KB = 1000 Byte) verwendet.
+   - Zur eindeutigen Unterscheidung gibt es die *binären Präfixe* der IEC-Norm:
+
+   | Dezimale Einheit |             | Größe in Bytes      | Binäre Einheit   |            | Größe in Bytes      |
+   |------------------+-------------+---------------------+------------------+------------+---------------------|
+   | 1 KB (Kilobyte)  | 10\(^{3}\)  | 1.000 B             | 1 KiB (Kibibyte) | 2\(^{10}\) | 1.024 B             |
+   | 1 MB (Megabyte)  | 10\(^{6}\)  | 1.000.000 B         | 1 MiB (Mebibyte) | 2\(^{20}\) | 1.048.576 B         |
+   | 1 GB (Gigabyte)  | 10\(^{9}\)  | 1.000.000.000 B     | 1 GiB (Gibibyte) | 2\(^{30}\) | 1.073.741.824 B     |
+   | 1 TB (Terabyte)  | 10\(^{12}\) | 1.000.000.000.000 B | 1 TiB (Tebibyte) | 2\(^{40}\) | 1.099.511.627.776 B |
+
+** Umrechnung durch wiederholtes Multiplizieren / Dividieren mit 1000/1024
+
+Sie können zwischen den Einheiten durch wiederholtes Multiplizieren / Dividieren mit 1000/1024 umrechnen.
+Beispiel:
+ - 42 TB * 1000 * 1000 * 1000 * 1000 = 42.000.000.000.000 B / 1024 / 1024 / 1024 / 1024 = 38,1987774743 TiB ≈ 39 TiB
+ - 42 TB * 1000 * 1000 * 1000 * 1000 = 42.000.000.000.000 B / (1024 * 1024 * 1024 * 1024) = 38,1987774743 TiB ≈ 39 TiB
+ - 42 TB * 10\(^{12}\) = 42.000.000.000.000 B / 2\(^{40}\)  ≈ 39 TiB
+  
+   *Warum ist das wichtig?*
+   - Betriebssysteme wie Windows nutzen oft die *dezimale Darstellung* (1 KB = 1000 Byte).
+   - Linux und andere Unix-Systeme nutzen häufig die *binäre Darstellung* (1 KiB = 1024 Byte).
+   - Dies kann zu Verwirrung führen, z. B. zeigt eine *1 TB Festplatte* unter Windows *1.000 GB*, unter Linux aber nur *931 GiB*.
+
+** Aufgaben
+ 1) Ein Unternehmen betreibt ein Rechenzentrum, in dem pro Sekunde 1 Gb/s an Datenverkehr verarbeitet wird.
+    1) Wie viele GByte werden pro Stunde verarbeitet?
+    2) Wie viele GiB entspricht das in einer Stunde auf volle GiB gerundet?
+ 2) Ein Server speichert täglich 850 GByte an Logdateien. Die Logdateien müssen für 30 Tage gespeichert bleiben, bevor sie gelöscht werden.
+    1) Wie viele Terrabyte (TB) Speicher ist nötig?
+    2) Wie groß wäre der Speicherbedarf in Tebibyte (TiB)?
+    3) Wie viele Mebibyte (MiB) entsprechen der gesamten Speichermenge?
+ 3) Ein Unternehmen speichert seine täglichen Produktionsdaten mit einem Volumen von 15 TiB in einem Cloud-Backup-System. Das Backup-System zeigt die Datenkapazität jedoch in TB.
+    1) Wie viele TB entsprechen den 15 TiB?
+    2) Das Unternehmen plant, die Speichermenge auf zwei Monate auszudehnen. Wie viel Speicherplatz in TB wird dann benötigt?
+    3) Wievielen PiB entspricht das rund?
+
+* Fazit
+   - Bits und Bytes sind die Grundlage der digitalen Speicherung.
+   - Das binäre und hexadezimale Zahlensystem wird in der Informatik intensiv genutzt.
+   - Speichergrößen haben unterschiedliche Konventionen (dezimal vs. binär).
+   - Die richtige Interpretation ist wichtig für Speicherberechnungen und technische Vergleiche.
+
+** Lösungen
+ 1) Lösungswege:
+    ~1 Gb/s * 60 s/min * 60 min/h = 3.600 Gb/s~~
+    ~3.600 Gbs/s * 1.000 * 1.000 * 1.000 / 8 bit/Byte = 450.000.000.000 B(yte)~
+    1) ~450.000.000.000 B(yte)/ (1.000 * 1.000 * 1.000) = 450 GB~
+    2) ~450.000.000.000 B(yte)/ (1.024 * 1.024 * 1.024) ≈ 420 GiB~
+ 2) Lösungswege:
+    ~850 GB * 30d = 25.500 GB~
+    1) ~25.500 GB / 1.000 = 25,5 TB~
+    2) ~25.500 GB * 10⁹ / 2⁴⁰ = 23,1921148951 TiB ≈ 24 TiB~
+    3) ~23,1921148951 TiB * 1024 = 23.748,7256526 MiB ≈ 23749 MiB~
+ 3) Lösungswege:
+    1) ~15 TiB * (1.024 * 1.024 * 1.024 * 1.024) / (1.000 * 1.000 * 1.000 * 1.000) = 16,4926744166 TB ≈ 17 TB~
+    2) ~16,4926744166 TB * 31d * 2 Monate = 1.022,54581383 TB ≈ 1.023 TB~[fn:1]
+    3) ~1.022,54581383 TB * 10¹² / 2⁵⁰ = 0,908203125001 PiB ≈ 1 PiB~
+
+* Footnotes
+[fn:1] Sie müssen mit der maximalen Anzahl an Tagen pro Monat rechnen: Beim  Übergang von Juli auf August und Dezember auf Januar folgen jeweils 2 Monate mit 31 Tagen aufeinander. 
+
