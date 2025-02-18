@@ -1,0 +1,86 @@
+:LaTeX_PROPERTIES:
+#+LANGUAGE: de
+#+OPTIONS: d:nil todo:nil pri:nil tags:nil
+#+OPTIONS: H:4
+#+LaTeX_CLASS: orgstandard
+#+LaTeX_CMD: xelatex
+#+LATEX_HEADER: \usepackage{listings}
+:END:
+
+:REVEAL_PROPERTIES:
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
+#+REVEAL_REVEAL_JS_VERSION: 4
+#+REVEAL_THEME: league
+#+REVEAL_EXTRA_CSS: ./mystyle.css
+#+REVEAL_HLEVEL: 2
+#+OPTIONS: timestamp:nil toc:nil num:nil
+:END:
+
+#+TITLE: Grundrechenarten und Klammerregel
+#+SUBTITLE: Technisches Rechnen
+#+AUTHOR: WS-LAT
+
+* Reihenfolge von Rechenoperationen
+
+ Rechenoperationen müssen in folgender Ordnung durchgeführt werden:
+ 1) Klammern
+ 2) Potenzen
+ 3) Punktrechnung (*/÷)
+ 4) Strich-Rechnung (+/-)
+ 5) Von links nach rechts
+ - Beispiele:
+   1) ~2 + 3 * 4 = 14; (2 + 3) * 4 = 5 * 4 = 20~
+   2) ~3 * 2⁴ = 48 ; (3 * 2)⁴ = 6⁴ = 1.296~
+   3) ~6 ÷ 2(1 + 2) = 6 ÷ 2 * 3 = 3 * 3 = 9~[fn:1]
+
+** Aufgaben:
+   1)  ~18 / 3 + 5 * 2 - 7 = ?~
+   2)  ~(12 - 4) * 3 + 10 / 2 = ?~
+   3)  ~5 * (8 + 2) - 15 / 3 = ?~
+
+* Potenzen & Wurzeln
+
+ - Potenzen :: Eine Zahl (Basis) wird wiederholt mit sich selbst multipliziert (Exponent).
+    * Beispiel :: ~2^3 = 2 * 2 * 2 = 8~
+ - Wurzeln :: Das Gegenteil von Potenzieren. Die Wurzel einer Zahl ist die Zahl, die, mit sich selbst potenziert, die ursprüngliche Zahl ergibt.
+    * Beispiel :: ~√9 = 3, weil 3 * 3 = 9~
+
+** Aufgaben:
+   1)  ~3^4 = ?~
+   2)  ~√256 = ?~
+   3)  ~10^6 = ?~
+
+* Rechnen mit Brüchen & Dezimalbrüchen
+
+  - Brüche :: \(\frac{\text{Zähler}}{\text{Nenner}}\). Gleichnamige Brüche können addiert und subtrahiert werden, indem man die Zähler addiert oder subtrahiert und den Nenner beibehält.
+    * Beispiel :: ~1/4 + 2/4 = 3/4~
+  - Dezimalbrüche :: Brüche mit Nennern als Zehnerpotenzen (10, 100, 1000, etc.).
+    * Beispiel :: ~0,25 = 25/100 = 1/4~
+
+** Aufgaben:
+  1)  ~2/5 + 1/5 = ?~
+  2)  ~0,75 - 0,25 = ?~
+  3)  ~1/2 * 3/4 = ?~
+
+* Bruchrechnung (Addition, Subtraktion, Multiplikation, Division)
+
+  - Addition & Subtraktion :: Brüche gleichnamig machen (gemeinsamen Nenner finden), dann Zähler addieren oder subtrahieren.
+  - Multiplikation :: \(\frac{\text{Zähler * Zähler}}{\text{Nenner * Nenner}}\)
+  - Division :: Ersten Bruch mit dem Kehrwert des zweiten Bruchs multiplizieren: \(\frac{\text{Zähler * Nenner}}{\text{Nenner * Zähler}}\)
+
+** Aufgaben:
+  1)  ~2/3 + 1/4 = ?~
+  2)  ~3/5 - 1/2 = ?~
+  3)  ~4/5 : 2/3 = ?~
+
+
+* Anwendungsbezug zur IT
+
+  - Binärzahlen :: Computer „denken” in Binärzahlen (0 und 1). Diese sind eng mit Potenzen von 2 verbunden.
+  - Speicherplatz :: Speicher wird in Bytes gemessen (2¹⁰ Bytes = 1 Kilobyte, etc.).
+  - Netzwerkprotokolle :: IP-Adressen bestehen aus vier durch Punkte getrennten Zahlen (0-255), die im Binärsystem dargestellt werden können.
+  - Datenübertragung : Daten werden oft in Paketen übertragen, deren Größe in Brüchen oder Dezimalzahlen angegeben werden kann.
+
+* Footnotes
+
+[fn:1] Dies ist ein Mathe-Meme, das mit dem Problem der impliziten Multiplikation (ohne ~*~) arbeiten. In der Praxis wird dies eigentlich so interpretiert als stünde da: ~6 ÷ (2 * (1 + 2)) = 6 ÷ (2 * 3) = 6 ÷ 6 = 1~. Tatsächlich können Sie, je nach dem, welchen Taschenrechner Sie benutzen, als Ergebnis dieser Rechnung entweder 9 oder 1 erhalten.
