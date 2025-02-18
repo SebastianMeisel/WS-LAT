@@ -79,7 +79,7 @@
   - Binärzahlen :: Computer „denken” in Binärzahlen (0 und 1). Diese sind eng mit Potenzen von 2 verbunden.
   - Speicherplatz :: Speicher wird in Bytes gemessen (2¹⁰ Bytes = 1 Kilobyte, etc.).
   - Netzwerkprotokolle :: IP-Adressen bestehen aus vier durch Punkte getrennten Zahlen (0-255), die im Binärsystem dargestellt werden können.
-  - Datenübertragung : Daten werden oft in Paketen übertragen, deren Größe in Brüchen oder Dezimalzahlen angegeben werden kann.
+  - Datenübertragung :: Daten werden oft in Paketen übertragen, deren Größe in Brüchen oder Dezimalzahlen angegeben werden kann.
 
 * Footnotes
 
