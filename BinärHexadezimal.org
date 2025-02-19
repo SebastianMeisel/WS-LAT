@@ -34,7 +34,7 @@
 
    - Ein *Nibble* besteht aus 4 Bits und entspricht einer hexadezimalen Ziffer (0–F).
 
-* Binäres und Hexadezimales Zahlensystem
+* Binäres und Hexadezimales Zahlensystem 
    - Das *binäre System* (Basis 2) verwendet nur die Ziffern *0 und 1*.
      - Jede Stelle in einer Binärzahl entspricht einer Zweipotenz, z. B.:
        - ~1010 = 1 * 2³ + 0 * 2² + 1 * 2¹ + 0 * 2⁰ = 8 + 0 + 2 + 1 = 10~
@@ -43,22 +43,26 @@
    - Das *hexadezimale System* (Basis 16) verwendet die Ziffern *0-9 und A-F*:
      - 0–9 entspricht 0–9 im Dezimalsystem.
      - A–F entspricht 10–15 im Dezimalsystem.
-   - Hexadezimalzahlen werden oft mit *0x* oder *h* gekennzeichnet (z. B. 0x2F oder 2Fh).
+     - Hexadezimalzahlen werden oft mit *0x* oder *h* gekennzeichnet (z. B. 0x2F oder 2Fh).
+     - Jede Stelle einer Hexadezimalzahl, entspricht einer Potenz von 16, z. B.:
+       - ~A3F1 = 10 * 16³ + 3 * 16² + 15 * 16¹ + 1 * 16⁰ = 40.960 + 768 + 240 + 1 = 41.969~
 
    *Beispiel für eine binäre zu hexadezimale Umwandlung*:
-   - Binär: `1010 1100` → Hexadezimal: `AC` (A=10, C=12)
+   - Binär: ~1010 1100~ → ~8+0+2+0=10~ ; ~8+4+0+0=12~ → Hexadezimal: ~AC~ (~A=10~, ~C=12~)
 
 * Speichergrößen: KB, MB, TB, PB vs. KiB, MiB, TiB, PiB
    - In der Informatik werden Speichergrößen oft in *Kilobyte (KB), Megabyte (MB), Terabyte (TB), Petabyte (PB)* angegeben.
    - Diese Begriffe basieren ursprünglich auf Zweierpotenzen (1 KB = 1024 Byte), werden aber im Marketing oft als Zehnerpotenzen (1 KB = 1000 Byte) verwendet.
    - Zur eindeutigen Unterscheidung gibt es die *binären Präfixe* der IEC-Norm:
 
-   | Dezimale Einheit |             | Größe in Bytes      | Binäre Einheit   |            | Größe in Bytes      |
-   |------------------+-------------+---------------------+------------------+------------+---------------------|
-   | 1 KB (Kilobyte)  | 10\(^{3}\)  | 1.000 B             | 1 KiB (Kibibyte) | 2\(^{10}\) | 1.024 B             |
-   | 1 MB (Megabyte)  | 10\(^{6}\)  | 1.000.000 B         | 1 MiB (Mebibyte) | 2\(^{20}\) | 1.048.576 B         |
-   | 1 GB (Gigabyte)  | 10\(^{9}\)  | 1.000.000.000 B     | 1 GiB (Gibibyte) | 2\(^{30}\) | 1.073.741.824 B     |
-   | 1 TB (Terabyte)  | 10\(^{12}\) | 1.000.000.000.000 B | 1 TiB (Tebibyte) | 2\(^{40}\) | 1.099.511.627.776 B |
+   | Dezimale Einheit |             | Größe in Bytes          | Binäre Einheit   |            | Größe in Bytes          |
+   |------------------+-------------+-------------------------+------------------+------------+-------------------------|
+   | 1 KB (Kilobyte)  | 10\(^{3}\)  | 1.000 B                 | 1 KiB (Kibibyte) | 2\(^{10}\) | 1.024 B                 |
+   | 1 MB (Megabyte)  | 10\(^{6}\)  | 1.000.000 B             | 1 MiB (Mebibyte) | 2\(^{20}\) | 1.048.576 B             |
+   | 1 GB (Gigabyte)  | 10\(^{9}\)  | 1.000.000.000 B         | 1 GiB (Gibibyte) | 2\(^{30}\) | 1.073.741.824 B         |
+   | 1 TB (Terabyte)  | 10\(^{12}\) | 1.000.000.000.000 B     | 1 TiB (Tebibyte) | 2\(^{40}\) | 1.099.511.627.776 B     |
+   | 1 PB (Petabyte)  | 10\(^{15}\) | 1.000.000.000.000.000 B | 1 PiB (Pebibyte  | 2\(^{50}\) | 1.125.899.906.842.624 B |
+
 
 ** Umrechnung durch wiederholtes Multiplizieren / Dividieren mit 1000/1024
 
@@ -92,9 +96,10 @@ Beispiel:
    - Speichergrößen haben unterschiedliche Konventionen (dezimal vs. binär).
    - Die richtige Interpretation ist wichtig für Speicherberechnungen und technische Vergleiche.
 
-** Lösungen
+* Lösungen
  1) Lösungswege:
-    ~1 Gb/s * 60 s/min * 60 min/h = 3.600 Gb/s~~
+    ~1 Gb/s * 60 s/min * 60 min/h = 3.600 Gb/s~
+
     ~3.600 Gbs/s * 1.000 * 1.000 * 1.000 / 8 bit/Byte = 450.000.000.000 B(yte)~
     1) ~450.000.000.000 B(yte)/ (1.000 * 1.000 * 1.000) = 450 GB~
     2) ~450.000.000.000 B(yte)/ (1.024 * 1.024 * 1.024) ≈ 420 GiB~
@@ -102,7 +107,7 @@ Beispiel:
     ~850 GB * 30d = 25.500 GB~
     1) ~25.500 GB / 1.000 = 25,5 TB~
     2) ~25.500 GB * 10⁹ / 2⁴⁰ = 23,1921148951 TiB ≈ 24 TiB~
-    3) ~23,1921148951 TiB * 1024 = 23.748,7256526 MiB ≈ 23749 MiB~
+    3) ~23,1921148951 TiB * (1024 * 1024) = 24.318.695,0682 MiB ≈ 24.318.695~ 
  3) Lösungswege:
     1) ~15 TiB * (1.024 * 1.024 * 1.024 * 1.024) / (1.000 * 1.000 * 1.000 * 1.000) = 16,4926744166 TB ≈ 17 TB~
     2) ~16,4926744166 TB * 31d * 2 Monate = 1.022,54581383 TB ≈ 1.023 TB~[fn:1]
