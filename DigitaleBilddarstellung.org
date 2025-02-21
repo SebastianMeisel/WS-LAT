@@ -83,7 +83,6 @@
   :CUSTOM_ID: subpixel
   :END:
   - Konzept :: Jeder sichtbare Pixel besteht aus mehreren Subpixeln (typischerweise RGB)
-  - RGB-Modell :: 
     - Rot (R)
     - Grün (G)
     - Blau (B)
@@ -107,8 +106,8 @@ Drucker stellen Farben grundlegend anders dar als Bildschirme. Daher müssen Sie
     - R :: Rot (Red)
     - G :: Grün (Green)
     - B :: Blau (Blue)
-  - CMYK :: Subtraktives Farbmodell (Druck)':
-    - c :: Zyan (Cyan)
+  - CMYK :: Subtraktives Farbmodell (Druck):
+    - C :: Zyan (Cyan)
     - M :: Magenta (Magenta)
     - Y :: Geld (Yellow)
     - K :: Schwarz (Key/Black)
@@ -118,7 +117,6 @@ Vor dem Druck ist die Umrechnung von RGB nach CMYK notwendig.
     - Tintenstrahldruck :: Einzelne Tintentröpfchen
     - Laserdruck :: Elektrostatisches Verfahren mit Toner
 
-       
 * Aufgabe zum Thema Displaytechnologie
 ** Wie vielen Pixel per Inch (PPI)…
 … hat ein  16:9 4K-OLED-Display mit 55 Inch Bilddiagonale bei einer Auflösung von ~3.840px x 2.160px~?
