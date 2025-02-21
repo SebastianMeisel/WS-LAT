@@ -1,0 +1,180 @@
+:LaTeX_PROPERTIES:
+#+LANGUAGE: de
+#+OPTIONS: d:nil todo:nil pri:nil tags:nil toc:nil nim:nil
+#+OPTIONS: H:4
+#+LaTeX_CLASS: orgstandard
+#+LaTeX_CMD: xelatex
+#+LATEX_HEADER: \usepackage{listings}
+:END:
+
+:REVEAL_PROPERTIES:
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
+#+REVEAL_REVEAL_JS_VERSION: 4
+#+REVEAL_THEME: league
+#+REVEAL_EXTRA_CSS: ./mystyle.css
+#+REVEAL_HLEVEL: 2
+#+OPTIONS: timestamp:nil toc:nil num:nil
+:END:
+
+#+TITLE: Digitale Bilddarstellung: Technische Konzepte und Formeln
+#+SUBTITLE: Technisches Rechnen
+#+AUTHOR: WS-LAT
+
+* PPI (Pixel per Inch) / DPI (Dots per Inch)
+  :PROPERTIES:
+  :CUSTOM_ID: ppi-dpi
+  :END:
+  - PPI :: Maßeinheit für die Pixeldichte eines digitalen Bildes oder Displays
+    - Gibt an, wie viele Bildpunkte auf einer Strecke von einem Zoll liegen
+    - Höhere PPI-Werte bedeuten schärfere Darstellung und mehr Details
+  - DPI :: Ähnliches Konzept, bezieht sich traditionell auf Druckauflösung
+    - Bezeichnet die Anzahl der Druckpunkte pro Zoll
+  - Berechnung :: $\text{PPI} = \frac{\text{Diagonale in Pixel}}{\text{Diagonale in Inch}}$
+  - Beispiel :: Ein 4K-Display (3840×2160 px) mit 55 Zoll Diagonale hat ca. 80 PPI
+
+* Umrechnung Inch in cm
+  :PROPERTIES:
+  :CUSTOM_ID: inch-cm
+  :END:
+  - Definition :: 1 Inch (Zoll) = 2,54 cm (exakt)
+  - Umrechnung Inch zu cm :: $\text{Länge}_{\text{cm}} = \text{Länge}_{\text{inch}} \times 2,54$
+  - Umrechnung cm zu Inch :: $\text{Länge}_{\text{inch}} = \text{Länge}_{\text{cm}} \div 2,54$
+  - Historische Bedeutung :: Internationale Standardisierung 1959 (vorher leichte Abweichungen)
+
+* Satz des Pythagoras
+  :PROPERTIES:
+  :CUSTOM_ID: pythagoras
+  :END:
+  - Theorem :: In einem rechtwinkligen Dreieck ist die Summe der Kathetenquadrate gleich dem Quadrat der Hypotenuse
+  - Formel :: $a^2 + b^2 = c^2$ (wobei c die Hypotenuse ist)
+  - Anwendung bei Displays ::
+    - Bildschirmbreite = a
+    - Bildschirmhöhe = b
+    - Bildschirmdiagonale = c
+  - Berechnung Diagonale in Pixel :: $\text{Diagonale}_{\text{px}} = \sqrt{\text{Breite}_{\text{px}}^2 + \text{Höhe}_{\text{px}}^2}$
+  - Beispiel :: Bei 3840×2160 px: $\sqrt{3840^2 + 2160^2} \approx 4405$ px
+
+* Elektrische Leistung
+  :PROPERTIES:
+  :CUSTOM_ID: leistung
+  :END:
+  - Definition :: Die pro Zeiteinheit umgesetzte/verbrauchte Energie
+  - Einheit :: Watt (W) = Joule pro Sekunde (J/s)
+  - Grundformel :: $P = U \times I$ (Leistung = Spannung × Stromstärke)
+  - Umrechnung :: 
+    - 1 Watt (W) = 1000 Milliwatt (mW)
+    - 1 Milliwatt (mW) = 0,001 Watt (W)
+  - Berechnung Gesamtleistung :: $P_{\text{gesamt}} = P_{\text{einzeln}} \times \text{Anzahl der Verbraucher}$
+  - Beispiel :: Bei 24.883.200 LEDs mit je 0,05 mW: $0,05 \text{ mW} \times 24.883.200 \div 1000 \approx 1244 \text{ W}$
+
+* Bildschirmverhältnis (Aspect Ratio)
+  :PROPERTIES:
+  :CUSTOM_ID: aspect-ratio
+  :END:
+  - Definition :: Verhältnis von Breite zu Höhe eines Displays
+  - Notation :: Breite:Höhe (z.B. 16:9, 4:3, 21:9)
+  - Berechnung :: 
+    - Bei bekannter Auflösung: $\text{Verhältnis} = \frac{\text{Breite in Pixel}}{\text{Höhe in Pixel}}$
+    - Bei 3840×2160 px: $\frac{3840}{2160} = \frac{16}{9}$
+  - Bedeutung :: Bestimmt die Form des Displays und die Darstellung von Inhalten
+
+* Subpixel-Technologie
+  :PROPERTIES:
+  :CUSTOM_ID: subpixel
+  :END:
+  - Konzept :: Jeder sichtbare Pixel besteht aus mehreren Subpixeln (typischerweise RGB)
+  - RGB-Modell :: 
+    - Rot (R)
+    - Grün (G)
+    - Blau (B)
+  - Berechnung Subpixel :: $\text{Anzahl Subpixel} = \text{Anzahl Farbkanäle} \times \text{Horizontale Auflösung} \times \text{Vertikale Auflösung}$
+  - Beispiel :: Bei RGB-Display mit 3840×2160 px: $3 \times 3840 \times 2160 = 24.883.200$ Subpixel
+  - Bedeutung :: Entscheidend für Farbdarstellung und Stromverbrauchsberechnung
+
+* Drucken: Übertragung von digitalen Bildern auf Papier
+:PROPERTIES:
+:CUSTOM_ID: print-technology
+:END:
+
+** Auflösungsanforderungen 
+  - Zeitschriftendruck: 300 DPI empfohlen
+  - Plakatdruck: 150 DPI (größerer Betrachtungsabstand)
+  - Kunstdruck: 600+ DPI für feine Details
+
+** Farbmodelle
+Drucker stellen Farben grundlegend anders dar als Bildschirme. Daher müssen Sie ein anderes Farbmodell benutzen:
+  - RGB :: Additives Farbmodell (Displays):
+    - R :: Rot (Red)
+    - G :: Grün (Green)
+    - B :: Blau (Blue)
+  - CMYK :: Subtraktives Farbmodell (Druck)':
+    - c :: Zyan (Cyan)
+    - M :: Magenta (Magenta)
+    - Y :: Geld (Yellow)
+    - K :: Schwarz (Key/Black)
+Vor dem Druck ist die Umrechnung von RGB nach CMYK notwendig.
+
+** Druckverfahren
+    - Tintenstrahldruck :: Einzelne Tintentröpfchen
+    - Laserdruck :: Elektrostatisches Verfahren mit Toner
+
+       
+* Aufgabe zum Thema Displaytechnologie
+** Wie vielen Pixel per Inch (PPI)…
+… hat ein  16:9 4K-OLED-Display mit 55 Inch Bilddiagonale bei einer Auflösung von ~3.840px x 2.160px~?
+  Wievielen ~Pixel/cm~ entspricht das? (~1 in = 2,54 cm~)
+** Wie hoch ist der Stromverbrauch …
+… wenn eine LED durchschnittlich ~0,05 mW~ verbraucht. Runden Sie auf volle Watt.
+
+* Aufgabe zur Drucktechnologie
+:PROPERTIES:
+:CUSTOM_ID: print-exercise
+:END:
+Ein Fotograf möchte ein Bild für eine Ausstellung drucken lassen. Das digitale Originalbild hat eine Auflösung von 5.184 × 3.456 Pixel (typisch für eine 18-Megapixel-DSLR-Kamera). Er plant, das Bild im Format 60 cm × 40 cm zu drucken.
+
+  1) Berechnen Sie die resultierende Druckauflösung in DPI.
+  2) Der Drucker verbraucht bei voller Farbdeckung ca. 12 ml Tinte pro m². Wie viel Tinte wird benötigt, wenn das Bild eine durchschnittliche Farbdeckung von 75% hat?
+  3) Wie groß könnte das Bild maximal bei einer empfohlenen Druckauflösung von mindestens 240 DPI gedruckt werden? Geben Sie die Maße an.
+  4) Der Drucker verarbeitet CMYK-Daten mit 8 Bit pro Kanal. Wie viel Speicherplatz (in MB) wird für die Druckdaten bei der Originalgröße des Bildes benötigt? (1 Byte = 8 Bit)
+
+#+LATEX: \clearpage
+* Lösung zum Thema Displaytechnologie
+** Pixel per Inch
+ - Diagonale in Pixel :: (nach Satz des Pythagoras) \(= \sqrt{3.840^2 + 2.160^2} ≈ 4.405 \text{px}\)
+ - PPI :: \(= \frac{\text{Diagonale}_{\text{px}}}{\text{Diagonale}_{\text{in}}} = \frac{4.405~\text{px}}{55~\text{in}} ≈ 80~\text{PPI}\) 
+
+ - Diagonale in cm :: \(= 55~\text{in} * 2,54 = 139,7~\text{cm}\)
+ - Pixel\cm :: \(= \frac{\text{Diagonale}_{\text{px}}}{\text{Diagonale}_{\text{cm}}} = \frac{4.405~\text{px}}{139,7~\text{cm}} ≈ 32~\text{Pixel\slash cm}\) 
+
+** Stromverbrauch
+
+ - LEDs :: (3 Subpixel: Red - Green - Blue) \(= 3 * 3.840~\text{px} * 2.160~\text{px} = 24.883.200~\text{Subpixel}\)
+ - Stromverbrauch :: \(= 0,05~\text{mW} * 24.883.200~\text{Subpixel} / 1.000 ≈ 1.244~\text{W}\)
+* Lösung  zur Drucktechnologie
+** Aufgabenteil 1: Druckauflösung berechnen
+
+  - Breite des Drucks :: 60 cm = 23,62 in (60 cm ÷ 2,54 cm/in)
+  - Höhe des Drucks :: 40 cm = 15,75 in (40 cm ÷ 2,54 cm/in)
+  - DPI in Breite :: 5.184 px ÷ 23,62 in ≈ 219,5 DPI
+  - DPI in Höhe :: 3.456 px ÷ 15,75 in ≈ 219,4 DPI
+  - Resultierende DPI :: ≈ 219 DPI (gerundet)
+
+** Aufgabenteil 2: Tintenverbrauch berechnen
+
+  - Fläche des Drucks :: 60 cm × 40 cm = 2.400 cm² = 0,24 m²
+  - Tintenverbrauch bei voller Deckung :: 12 ml/m² × 0,24 m² = 2,88 ml
+  - Tintenverbrauch bei 75% Deckung :: 2,88 ml × 0,75 = 2,16 ml
+
+** Aufgabenteil 3: Maximale Druckgröße bei 240 DPI
+
+  - Maximale Breite :: 5.184 px ÷ 240 DPI = 21,6 in = 54,86 cm
+  - Maximale Höhe :: 3.456 px ÷ 240 DPI = 14,4 in = 36,58 cm
+  - Maximale Druckgröße :: 54,9 cm × 36,6 cm (gerundet)
+
+** Aufgabenteil 4: Speicherplatzbedarf für CMYK-Daten
+
+  - Anzahl Pixel :: 5.184 × 3.456 = 17.915.904 Pixel
+  - CMYK-Kanäle :: 4 Kanäle (Cyan, Magenta, Yellow, Key/Black)
+  - Farbtiefe :: 8 Bit pro Kanal = 1 Byte pro Kanal
+  - Gesamter Speicherbedarf :: 17.915.904 Pixel × 4 Kanäle × 1 Byte ≈ 71.663.616 Byte
+  - Umrechnung in MB :: 71.663.616 Byte ÷ 1.048.576 Byte/MB ≈ 68,34 MB
