@@ -52,7 +52,7 @@
 
 * Rechnen mit Brüchen & Dezimalbrüchen
 
-  - Brüche :: \(\frac{\text{Zähler}}{\text{Nenner}}\). Gleichnamige Brüche können addiert und subtrahiert werden, indem man die Zähler addiert oder subtrahiert und den Nenner beibehält.
+  - Brüche :: \[\frac{\text{Zähler}}{\text{Nenner}}\]. Gleichnamige Brüche können addiert und subtrahiert werden, indem man die Zähler addiert oder subtrahiert und den Nenner beibehält.
     * Beispiel :: ~1/4 + 2/4 = 3/4~
   - Dezimalbrüche :: Brüche mit Nennern als Zehnerpotenzen (10, 100, 1000, etc.).
     * Beispiel :: ~0,25 = 25/100 = 1/4~
@@ -65,14 +65,13 @@
 * Bruchrechnung (Addition, Subtraktion, Multiplikation, Division)
 
   - Addition & Subtraktion :: Brüche gleichnamig machen (gemeinsamen Nenner finden), dann Zähler addieren oder subtrahieren.
-  - Multiplikation :: \(\frac{\text{Zähler * Zähler}}{\text{Nenner * Nenner}}\)
-  - Division :: Ersten Bruch mit dem Kehrwert des zweiten Bruchs multiplizieren: \(\frac{\text{Zähler * Nenner}}{\text{Nenner * Zähler}}\)
+  - Multiplikation :: \[\frac{\text{Zähler * Zähler}}{\text{Nenner * Nenner}}\]
+  - Division :: Ersten Bruch mit dem Kehrwert des zweiten Bruchs multiplizieren: \[\frac{\text{Zähler * Nenner}}{\text{Nenner * Zähler}}\]
 
 ** Aufgaben:
   1)  ~2/3 + 1/4 = ?~
   2)  ~3/5 - 1/2 = ?~
   3)  ~4/5 : 2/3 = ?~
-
 
 * Anwendungsbezug zur IT
 

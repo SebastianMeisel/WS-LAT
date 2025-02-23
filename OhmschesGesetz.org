@@ -1,0 +1,135 @@
+:LaTeX_PROPERTIES:
+#+LANGUAGE: de
+#+OPTIONS: d:nil todo:nil pri:nil tags:nil
+#+OPTIONS: H:4
+#+LaTeX_CLASS: orgstandard
+#+LaTeX_CMD: xelatex
+#+LATEX_HEADER: \usepackage{listings}
+:END:
+
+:REVEAL_PROPERTIES:
+#+REVEAL_ROOT: https://cdn.jsdelivr.net/npm/reveal.js
+#+REVEAL_REVEAL_JS_VERSION: 4
+#+REVEAL_THEME: league
+#+REVEAL_EXTRA_CSS: ./mystyle.css
+#+REVEAL_HLEVEL: 2
+#+OPTIONS: timestamp:nil toc:nil num:nil
+:END:
+
+#+TITLE: Ohmsches Gesetz und Elektrische Leistung
+#+SUBTITLE: Technisches Rechnen
+#+AUTHOR: WS-LAT
+
+** 1. Grundlagen des Ohmschen Gesetzes
+
+Das Ohmsche Gesetz beschreibt den Zusammenhang zwischen Spannung (U), Stromstärke (I) und Widerstand (R) in einem elektrischen Stromkreis.
+
+\[ U = R \cdot I \]
+
+wobei:
+- U = Spannung in Volt (V)
+- R = Widerstand in Ohm (Ω)
+- I = Stromstärke in Ampere (A)
+
+Umformungen:
+\[ I = \frac{U}{R} \quad \text{und} \quad R = \frac{U}{I} \]
+
+** 2. Elektrische Leistung und Energie
+
+*** 2.1 Leistung
+
+Die elektrische Leistung (P) wird berechnet durch:
+
+\[ P = U \cdot I \]
+
+Durch Einsetzen des Ohmschen Gesetzes ergeben sich weitere Formeln:
+
+\[ P = R \cdot I^2 \quad \text{oder} \quad P = \frac{U^2}{R} \]
+
+wobei:
+- P = Leistung in Watt (W)
+
+*** 2.2 Elektrische Energie
+
+Die elektrische Energie (E) ist das Produkt aus Leistung und Zeit:
+
+\[ E = P \cdot t \]
+
+wobei:
+- E = Energie in Wattstunden (Wh)
+- P = Leistung in Watt (W)
+- t = Zeit in Stunden (h)
+
+Wichtige Umrechnungen:
+- 1 kWh = 1000 Wh
+- 1 Wh = 3600 Joule (J)
+- 1 kWh = 3,6 Megajoule (MJ)
+
+** 3. Praxisaufgaben
+
+*** Aufgabe 1: USV-Dimensionierung
+
+Ein Server hat eine Leistungsaufnahme von 400W und soll mit einer USV 15 Minuten überbrückt werden. Die USV arbeitet mit 12V Batterien.
+
+Gesucht:
+a) Welche Stromstärke fließt auf der 12V-Seite?
+b) Welche Batteriekapazität in Ah wird mindestens benötigt?
+c) Wie viel elektrische Energie in Wh muss die USV bereitstellen?
+
+Lösung:
+a) Stromstärke berechnen:
+\[ I = \frac{P}{U} = \frac{400W}{12V} = 33,33A \]
+
+b) Batteriekapazität für 15 Minuten:
+\[ Kapazität = I \cdot \frac{Zeit}{1h} = 33,33A \cdot \frac{15}{60}h = 8,33Ah \]
+
+Mit Sicherheitspuffer von 20%: 10Ah Batteriekapazität empfohlen.
+
+c) Benötigte elektrische Energie:
+\[ E = P \cdot t = 400W \cdot \frac{15}{60}h = 100Wh \]
+
+*** Aufgabe 2: Netzteil-Berechnung
+
+Ein PC-Netzteil liefert 12V für die Komponenten. Angeschlossen sind:
+- CPU: 95W
+- Grafikkarte: 150W
+- Mainboard: 35W
+- Festplatten: 20W
+
+Gesucht:
+a) Gesamte Stromaufnahme in Ampere
+b) Minimale Netzteilleistung mit 20% Reserve
+c) Energieverbrauch pro Tag bei 8 Stunden Betrieb
+
+Lösung:
+a) Gesamtleistung addieren:
+\[ P_{gesamt} = 95W + 150W + 35W + 20W = 300W \]
+
+Stromaufnahme bei 12V:
+\[ I_{gesamt} = \frac{P_{gesamt}}{U} = \frac{300W}{12V} = 25A \]
+
+b) Netzteilleistung mit 20% Reserve:
+\[ P_{Netzteil} = P_{gesamt} \cdot 1,2 = 300W \cdot 1,2 = 360W \]
+
+Empfehlung: Netzteil mit mindestens 400W Nennleistung wählen.
+
+c) Täglicher Energieverbrauch:
+\[ E_{Tag} = P_{gesamt} \cdot 8h = 300W \cdot 8h = 2400Wh = 2,4kWh \]
+
+** 4. Wichtige Hinweise für die IT-Praxis
+
+- Immer Sicherheitsreserven einplanen
+- Bei Netzteilen auf den Wirkungsgrad achten (80 PLUS Zertifizierung)
+- Bei USV-Systemen regelmäßige Wartung der Batterien beachten
+- Leistungsaufnahme von IT-Komponenten kann stark schwanken
+- Energieverbrauch regelmäßig überwachen für Kostenoptimierung
+- Bei USV-Systemen die tatsächliche Wattstunden-Kapazität beachten, nicht nur die VA-Angabe
+
+** 5. Formelsammlung
+
+\[ U = R \cdot I \]
+\[ P = U \cdot I \]
+\[ P = R \cdot I^2 \]
+\[ P = \frac{U^2}{R} \]
+\[ E = P \cdot t \] (Energie in Wattstunden)
+\[ E_{kWh} = \frac{P \cdot t}{1000} \] (Energie in Kilowattstunden)

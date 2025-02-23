@@ -34,18 +34,37 @@
 
    - Ein *Nibble* besteht aus 4 Bits und entspricht einer hexadezimalen Ziffer (0–F).
 
-* Binäres und Hexadezimales Zahlensystem 
+* Binäres und Hexadezimales Zahlensystem
+   - Das *dezimale System* (Basis 10) verwendet die 10 Ziffern *0 bis 9*.
+     - Jede Stelle in einer Binärzahl entspricht einer Zehnerpotenz, z. B.:
+       - ~1010 = 1 * 10³ + 0 * 10² + 1 * 10¹ + 0 * 10⁰ = 1000 + 0 + 10 + 1~
+#+ATTR_HTML: :width 50%
+#+ATTR_LATEX: :width .3\linewidth :placement [!htpb]
+#+ATTR_ORG: :width 700
+[[file:Bilder/Dezimal.png]]
+
    - Das *binäre System* (Basis 2) verwendet nur die Ziffern *0 und 1*.
-     - Jede Stelle in einer Binärzahl entspricht einer Zweipotenz, z. B.:
+     - Jede Stelle in einer Binärzahl entspricht einer Zweierpotenz, z. B.:
        - ~1010 = 1 * 2³ + 0 * 2² + 1 * 2¹ + 0 * 2⁰ = 8 + 0 + 2 + 1 = 10~
        - ~1100 = 1 * 2³ + 1 * 2² + 0 * 2¹ + 0 * 2⁰ = 8 + 4 + 0 + 0 = 12~
-       - \(\hspace{2ex}\) ~11 =                   1 * 2¹ + 1 * 2⁰ =         2 + 1 =  3~
+       - \(\hspace{2ex}\) ~11 =~ \(\hspace{23ex}\) ~1 * 2¹ + 1 * 2⁰ =~ \(\hspace{10ex}\) ~2 + 1 =  3~
+#+ATTR_HTML: :width 50%
+#+ATTR_LATEX: :width .3\linewidth :placement [!htpb]
+#+ATTR_ORG: :width 700
+[[file:Bilder/Binär.png]]
+
    - Das *hexadezimale System* (Basis 16) verwendet die Ziffern *0-9 und A-F*:
      - 0–9 entspricht 0–9 im Dezimalsystem.
      - A–F entspricht 10–15 im Dezimalsystem.
      - Hexadezimalzahlen werden oft mit *0x* oder *h* gekennzeichnet (z. B. 0x2F oder 2Fh).
      - Jede Stelle einer Hexadezimalzahl, entspricht einer Potenz von 16, z. B.:
-       - ~A3F1 = 10 * 16³ + 3 * 16² + 15 * 16¹ + 1 * 16⁰ = 40.960 + 768 + 240 + 1 = 41.969~
+       - ~A3F1 = 10 * 16³ + 3 * 16² + 15 * 16¹ + 1 * 16⁰~
+
+	\(\hspace{6ex}\) ~=~ \(\hspace{3ex}\) ~40.960 +~ \(\hspace{5ex}\) ~768 +~ \(\hspace{7ex}\) ~240 +~ \(\hspace{7ex}\) ~1 = 41.969~
+#+ATTR_HTML: :width 50%
+#+ATTR_LATEX: :width .3\linewidth :placement [!htpb]
+#+ATTR_ORG: :width 700
+[[file:Bilder/Hexadezimal.png]]
 
    *Beispiel für eine binäre zu hexadezimale Umwandlung*:
    - Binär: ~1010 1100~ → ~8+0+2+0=10~ ; ~8+4+0+0=12~ → Hexadezimal: ~AC~ (~A=10~, ~C=12~)
@@ -57,11 +76,11 @@
 
    | Dezimale Einheit |             | Größe in Bytes          | Binäre Einheit   |            | Größe in Bytes          |
    |------------------+-------------+-------------------------+------------------+------------+-------------------------|
-   | 1 KB (Kilobyte)  | 10\(^{3}\)  | 1.000 B                 | 1 KiB (Kibibyte) | 2\(^{10}\) | 1.024 B                 |
-   | 1 MB (Megabyte)  | 10\(^{6}\)  | 1.000.000 B             | 1 MiB (Mebibyte) | 2\(^{20}\) | 1.048.576 B             |
-   | 1 GB (Gigabyte)  | 10\(^{9}\)  | 1.000.000.000 B         | 1 GiB (Gibibyte) | 2\(^{30}\) | 1.073.741.824 B         |
-   | 1 TB (Terabyte)  | 10\(^{12}\) | 1.000.000.000.000 B     | 1 TiB (Tebibyte) | 2\(^{40}\) | 1.099.511.627.776 B     |
-   | 1 PB (Petabyte)  | 10\(^{15}\) | 1.000.000.000.000.000 B | 1 PiB (Pebibyte  | 2\(^{50}\) | 1.125.899.906.842.624 B |
+   | 1 KB (Kilobyte)  | 10\[^{3}\]  | 1.000 B                 | 1 KiB (Kibibyte) | 2\[^{10}\] | 1.024 B                 |
+   | 1 MB (Megabyte)  | 10\[^{6}\]  | 1.000.000 B             | 1 MiB (Mebibyte) | 2\[^{20}\] | 1.048.576 B             |
+   | 1 GB (Gigabyte)  | 10\[^{9}\]  | 1.000.000.000 B         | 1 GiB (Gibibyte) | 2\[^{30}\] | 1.073.741.824 B         |
+   | 1 TB (Terabyte)  | 10\[^{12}\] | 1.000.000.000.000 B     | 1 TiB (Tebibyte) | 2\[^{40}\] | 1.099.511.627.776 B     |
+   | 1 PB (Petabyte)  | 10\[^{15}\] | 1.000.000.000.000.000 B | 1 PiB (Pebibyte  | 2\[^{50}\] | 1.125.899.906.842.624 B |
 
 
 ** Umrechnung durch wiederholtes Multiplizieren / Dividieren mit 1000/1024
@@ -70,7 +89,7 @@ Sie können zwischen den Einheiten durch wiederholtes Multiplizieren / Dividier
 Beispiel:
  - 42 TB * 1000 * 1000 * 1000 * 1000 = 42.000.000.000.000 B / 1024 / 1024 / 1024 / 1024 = 38,1987774743 TiB ≈ 39 TiB
  - 42 TB * 1000 * 1000 * 1000 * 1000 = 42.000.000.000.000 B / (1024 * 1024 * 1024 * 1024) = 38,1987774743 TiB ≈ 39 TiB
- - 42 TB * 10\(^{12}\) = 42.000.000.000.000 B / 2\(^{40}\)  ≈ 39 TiB
+ - 42 TB * 10\[^{12}\] = 42.000.000.000.000 B / 2\[^{40}\]  ≈ 39 TiB
   
    *Warum ist das wichtig?*
    - Betriebssysteme wie Windows nutzen oft die *dezimale Darstellung* (1 KB = 1000 Byte).

@@ -29,7 +29,7 @@
     - Höhere PPI-Werte bedeuten schärfere Darstellung und mehr Details
   - DPI :: Ähnliches Konzept, bezieht sich traditionell auf Druckauflösung
     - Bezeichnet die Anzahl der Druckpunkte pro Zoll
-  - Berechnung :: $\text{PPI} = \frac{\text{Diagonale in Pixel}}{\text{Diagonale in Inch}}$
+  - Berechnung :: \[\text{PPI} = \frac{\text{Diagonale in Pixel}}{\text{Diagonale in Inch}}\]
   - Beispiel :: Ein 4K-Display (3840×2160 px) mit 55 Zoll Diagonale hat ca. 80 PPI
 
 * Umrechnung Inch in cm
@@ -37,8 +37,8 @@
   :CUSTOM_ID: inch-cm
   :END:
   - Definition :: 1 Inch (Zoll) = 2,54 cm (exakt)
-  - Umrechnung Inch zu cm :: $\text{Länge}_{\text{cm}} = \text{Länge}_{\text{inch}} \times 2,54$
-  - Umrechnung cm zu Inch :: $\text{Länge}_{\text{inch}} = \text{Länge}_{\text{cm}} \div 2,54$
+  - Umrechnung Inch zu cm :: \[\text{Länge}_{\text{cm}} = \text{Länge}_{\text{inch}} \times 2,54\]
+  - Umrechnung cm zu Inch :: \[\text{Länge}_{\text{inch}} = \text{Länge}_{\text{cm}} \div 2,54\]
   - Historische Bedeutung :: Internationale Standardisierung 1959 (vorher leichte Abweichungen)
 
 * Satz des Pythagoras
@@ -46,13 +46,13 @@
   :CUSTOM_ID: pythagoras
   :END:
   - Theorem :: In einem rechtwinkligen Dreieck ist die Summe der Kathetenquadrate gleich dem Quadrat der Hypotenuse
-  - Formel :: $a^2 + b^2 = c^2$ (wobei c die Hypotenuse ist)
+  - Formel :: \[a^2 + b^2 = c^2\] (wobei c die Hypotenuse ist)
   - Anwendung bei Displays ::
     - Bildschirmbreite = a
     - Bildschirmhöhe = b
     - Bildschirmdiagonale = c
-  - Berechnung Diagonale in Pixel :: $\text{Diagonale}_{\text{px}} = \sqrt{\text{Breite}_{\text{px}}^2 + \text{Höhe}_{\text{px}}^2}$
-  - Beispiel :: Bei 3840×2160 px: $\sqrt{3840^2 + 2160^2} \approx 4405$ px
+  - Berechnung Diagonale in Pixel :: \[\text{Diagonale}_{\text{px}} = \sqrt{\text{Breite}_{\text{px}}^2 + \text{Höhe}_{\text{px}}^2}\]
+  - Beispiel :: Bei 3840×2160 px: \[\sqrt{3840^2 + 2160^2} \approx 4405\] px
 
 * Elektrische Leistung
   :PROPERTIES:
@@ -60,12 +60,12 @@
   :END:
   - Definition :: Die pro Zeiteinheit umgesetzte/verbrauchte Energie
   - Einheit :: Watt (W) = Joule pro Sekunde (J/s)
-  - Grundformel :: $P = U \times I$ (Leistung = Spannung × Stromstärke)
+  - Grundformel :: \[P = U \times I\] (Leistung = Spannung × Stromstärke)
   - Umrechnung :: 
     - 1 Watt (W) = 1000 Milliwatt (mW)
     - 1 Milliwatt (mW) = 0,001 Watt (W)
-  - Berechnung Gesamtleistung :: $P_{\text{gesamt}} = P_{\text{einzeln}} \times \text{Anzahl der Verbraucher}$
-  - Beispiel :: Bei 24.883.200 LEDs mit je 0,05 mW: $0,05 \text{ mW} \times 24.883.200 \div 1000 \approx 1244 \text{ W}$
+  - Berechnung Gesamtleistung :: \[P_{\text{gesamt}} = P_{\text{einzeln}} \times \text{Anzahl der Verbraucher}\]
+  - Beispiel :: Bei 24.883.200 LEDs mit je 0,05 mW: \[0,05 \text{ mW} \times 24.883.200 \div 1000 \approx 1244 \text{ W}\]
 
 * Bildschirmverhältnis (Aspect Ratio)
   :PROPERTIES:
@@ -74,8 +74,8 @@
   - Definition :: Verhältnis von Breite zu Höhe eines Displays
   - Notation :: Breite:Höhe (z.B. 16:9, 4:3, 21:9)
   - Berechnung :: 
-    - Bei bekannter Auflösung: $\text{Verhältnis} = \frac{\text{Breite in Pixel}}{\text{Höhe in Pixel}}$
-    - Bei 3840×2160 px: $\frac{3840}{2160} = \frac{16}{9}$
+    - Bei bekannter Auflösung: \[\text{Verhältnis} = \frac{\text{Breite in Pixel}}{\text{Höhe in Pixel}}\]
+    - Bei 3840×2160 px: \[\frac{3840}{2160} = \frac{16}{9}\]
   - Bedeutung :: Bestimmt die Form des Displays und die Darstellung von Inhalten
 
 * Subpixel-Technologie
@@ -83,11 +83,11 @@
   :CUSTOM_ID: subpixel
   :END:
   - Konzept :: Jeder sichtbare Pixel besteht aus mehreren Subpixeln (typischerweise RGB)
-    - Rot (R)
-    - Grün (G)
-    - Blau (B)
-  - Berechnung Subpixel :: $\text{Anzahl Subpixel} = \text{Anzahl Farbkanäle} \times \text{Horizontale Auflösung} \times \text{Vertikale Auflösung}$
-  - Beispiel :: Bei RGB-Display mit 3840×2160 px: $3 \times 3840 \times 2160 = 24.883.200$ Subpixel
+    - R :: Rot (Red)
+    - G :: Grün (Green)
+    - B :: Blau (Blue)
+  - Berechnung Subpixel :: \[\text{Anzahl Subpixel} = \text{Anzahl Farbkanäle} \times \text{Horizontale Auflösung} \times \text{Vertikale Auflösung}\]
+  - Beispiel :: Bei RGB-Display mit 3840×2160 px: \[3 \times 3840 \times 2160 = 24.883.200\] Subpixel
   - Bedeutung :: Entscheidend für Farbdarstellung und Stromverbrauchsberechnung
 
 * Drucken: Übertragung von digitalen Bildern auf Papier
@@ -138,16 +138,16 @@ Ein Fotograf möchte ein Bild für eine Ausstellung drucken lassen. Das digitale
 #+LATEX: \clearpage
 * Lösung zum Thema Displaytechnologie
 ** Pixel per Inch
- - Diagonale in Pixel :: (nach Satz des Pythagoras) \(= \sqrt{3.840^2 + 2.160^2} ≈ 4.405 \text{px}\)
- - PPI :: \(= \frac{\text{Diagonale}_{\text{px}}}{\text{Diagonale}_{\text{in}}} = \frac{4.405~\text{px}}{55~\text{in}} ≈ 80~\text{PPI}\) 
+ - Diagonale in Pixel :: (nach Satz des Pythagoras) \[= \sqrt{3.840^2 + 2.160^2} ≈ 4.405 \text{px}\]
+ - PPI :: \[= \frac{\text{Diagonale}_{\text{px}}}{\text{Diagonale}_{\text{in}}} = \frac{4.405~\text{px}}{55~\text{in}} ≈ 80~\text{PPI}\] 
 
- - Diagonale in cm :: \(= 55~\text{in} * 2,54 = 139,7~\text{cm}\)
- - Pixel\cm :: \(= \frac{\text{Diagonale}_{\text{px}}}{\text{Diagonale}_{\text{cm}}} = \frac{4.405~\text{px}}{139,7~\text{cm}} ≈ 32~\text{Pixel\slash cm}\) 
+ - Diagonale in cm :: \[= 55~\text{in} * 2,54 = 139,7~\text{cm}\]
+ - Pixel\cm :: \[= \frac{\text{Diagonale}_{\text{px}}}{\text{Diagonale}_{\text{cm}}} = \frac{4.405~\text{px}}{139,7~\text{cm}} ≈ 32~\text{Pixel\slash cm}\] 
 
 ** Stromverbrauch
 
- - LEDs :: (3 Subpixel: Red - Green - Blue) \(= 3 * 3.840~\text{px} * 2.160~\text{px} = 24.883.200~\text{Subpixel}\)
- - Stromverbrauch :: \(= 0,05~\text{mW} * 24.883.200~\text{Subpixel} / 1.000 ≈ 1.244~\text{W}\)
+ - LEDs :: (3 Subpixel: Red - Green - Blue) \[= 3 * 3.840~\text{px} * 2.160~\text{px} = 24.883.200~\text{Subpixel}\]
+ - Stromverbrauch :: \[= 0,05~\text{mW} * 24.883.200~\text{Subpixel} / 1.000 ≈ 1.244~\text{W}\]
 * Lösung  zur Drucktechnologie
 ** Aufgabenteil 1: Druckauflösung berechnen
 

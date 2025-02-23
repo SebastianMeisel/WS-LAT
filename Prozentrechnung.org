@@ -62,10 +62,10 @@ p = W × 100 ÷ G
 
 * Prozentrechnung im Hundert vs. von Hundert
 
-# #+ATTR_HTML: :width 50%
-# #+ATTR_LATEX: :width .65\linewidth :placement [!htpb]
-# #+ATTR_ORG: :width 700
-# [[file:Bilder/ProzentrechnungIH.png]]
+#+ATTR_HTML: :width 50%
+#+ATTR_LATEX: :width .65\linewidth :placement [!htpb]
+#+ATTR_ORG: :width 700
+[[file:Bilder/ProzentrechnungIH.png]]
 
 ** Von Hundert (normale Prozentrechnung):
 - Berechnet einen Anteil vom Grundwert
@@ -128,7 +128,7 @@ Lösung:
 * Lösungen
 
  1) 10.000 × 90 ÷ 100 = 9.000 Anfragen/s
- 2) 2.500 € / (100 - 12) * 100 = 2.840,91 €
+ 2) 2.500 € / (100 - 12) * 12 ≈ 340,91 € = 2.500 € + 340,91 € = 2.840,91 €
  3) 1000 GB × 40 ÷ 100 = 400 GB
  4) 400 GB / 80 * 100 = 500 GB
  5) 170€ × 100 ÷ 85 = 200€
