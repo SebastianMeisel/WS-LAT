@@ -80,7 +80,7 @@
    | 1 MB (Megabyte)  | 10\[^{6}\]  | 1.000.000 B             | 1 MiB (Mebibyte) | 2\[^{20}\] | 1.048.576 B             |
    | 1 GB (Gigabyte)  | 10\[^{9}\]  | 1.000.000.000 B         | 1 GiB (Gibibyte) | 2\[^{30}\] | 1.073.741.824 B         |
    | 1 TB (Terabyte)  | 10\[^{12}\] | 1.000.000.000.000 B     | 1 TiB (Tebibyte) | 2\[^{40}\] | 1.099.511.627.776 B     |
-   | 1 PB (Petabyte)  | 10\[^{15}\] | 1.000.000.000.000.000 B | 1 PiB (Pebibyte  | 2\[^{50}\] | 1.125.899.906.842.624 B |
+   | 1 PB (Petabyte)  | 10\[^{15}\] | 1.000.000.000.000.000 B | 1 PiB (Pebibyte) | 2\[^{50}\] | 1.125.899.906.842.624 B |
 
 
 ** Umrechnung durch wiederholtes Multiplizieren / Dividieren mit 1000/1024
